@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Silkscreen:wght@400;700&family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    perspective: 800;
+    /* overflow: hidden; */
+    /* background-color: grey; */
+    /* color: white; */
+}
+.cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: greenyellow;
+    position: fixed;
+    z-index: 99;
+
+}
+.cursor-back{
+    background-color: rgba(172, 255, 47, 0.218);
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(80px);
+    /* z-index: 1; */
+
+}
+.nav{
+    height: 145px;
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding:0 150px;
+    gap: 40px;
+    position: fixed;
+    z-index: 1;
+}
+.nav img{
+    height: 80px;
+    width: 80px;
+    /* margin: 20px 100px; */
+}
+.nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all ease-in-out 0.3s;
+}
+.nav h4:hover{
+   color: greenyellow;
+   cursor: pointer;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+.main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.40);
+}
+
+.page1{
+    height: 100vh;
+    width: 100%;
+    /* background-color: red;    */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.page1 h1{
+    font-size: 130px;
+    font-weight: 800;
+    position: relative;
+}
+.page1 h1::before{
+    content:"EAT. DRINK. PLAY";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -6px;
+    -webkit-text-stroke: 2px greenyellow;
+    z-index: -1;
+}
+.page1 h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.page1 p{
+    font-size: 18px;
+    font-weight: 500;
+    width: 40%;
+}
+.page2{
+    min-height: 100vh;
+    width: 100%;
+}
+.scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+}
+.scroller::-webkit-scrollbar{
+    display: none;
+}
+.scroller-text_1{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroller h4{
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    color: transparent;
+    /* margin-right: 10px; */
+    transition: all linear 0.5s;
+    font-family: 'Times New Roman', Times, serif;
+    -webkit-text-stroke: 2px greenyellow;
+
+}
+.page2 .scroller h4:hover{
+    color: greenyellow;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.page3{
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+
+}
+.page3 img{
+    height: 220px;
+    width: 220px;
+    border-radius: 10px;
+    /* padding: 0 50px; */
+    object-fit: cover;
+}
+.about-us{
+    width: 50%;
+    text-align: center;
+}
+.about-us h3{
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+.about-us p{
+    font-size: 20px;
+    line-height: 27px;
+}
+.cards{
+    height: 60vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* gap: 34px; */
+    position: relative;
+}
+.card1{
+    height: 70%;
+    width: 24%;
+    /* background-color: blue; */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(ghost-of-tsushima-5k-ju-1920x1080.jpg);
+    transition: all ease 0.5s;
+
+}
+.card2{
+    height: 70%;
+    width: 24%;
+    /* background-color: blue; */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(forest-cabin-flower-field-digital-art-hd-wallpaper-uhdpaper.com-451@5@c.jpg);
+    transition: all ease 0.5s;
+
+}
+.card3{
+    height: 70%;
+    width: 24%;
+    /* background-color: blue; */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(car-on-road-sunset-scenery-digital-art-hd-wallpaper-uhdpaper.com-658@0@j.jpg);
+    transition: all ease 0.5s;
+
+}
+#overlay{
+    height: 100%;
+    width: 100%;
+    background-color: greenyellow;
+    padding-top: 25px;
+    padding-left: 30px;
+    opacity: 0;
+    border-radius: 20px;
+    position: relative;
+    transition: all ease 0.5s;
+
+   
+}
+#overlay h4{
+    color: black;
+    font-size: 40px;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+
+}
+#overlay p{
+    color: black;
+    font-size: 20px;
+    width: 90%;
+}
+
+.card1:hover #overlay{
+    opacity: 1;
+}
+.card2:hover #overlay{
+    opacity: 1;
+}
+.card3:hover #overlay{
+    opacity: 1;
+}
+
+.card1:hover{
+    transform: rotate3d(-1,1,0,22deg);
+}
+.card2:hover{
+    transform: rotate3d(-1,1,0,22deg);
+}
+.card3:hover{
+    transform: rotate3d(-1,1,0,22deg);
+}
+.green-line{
+    height: 25vh;
+    width: 100%;
+    background:linear-gradient(to left bottom,green, greenyellow) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.green-line h3{
+    width: 40%;
+    font-size: 20px;
+    text-align: center;
+    line-height: 6vh;
+}
+.page4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vh;
+    margin-left: 10px;
+    /* height: inherit; */
+}
+.page4 img{
+    height: 60px;
+}
+.page4 p{
+    font-size: 30px;
+    text-align: center;
+    width: 60%;
+    font-weight: 800;
+  
+}
+#colon_1{
+    margin-bottom: 40vh;
+    margin-right: 20px;
+}
+#colon_2{
+    margin-left: 50px;
+    margin-top: 55vh;
+}
+.page5{
+    height: 50vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    position: relative;
+}
+.page5 h1{
+    position: absolute;
+    font-size: 85px;
+    top: 30%;
+    font-weight: 800;
+    font-family:'Times New Roman', Times, serif;
+    color: black;
+    -webkit-text-stroke: 2px white;
+
+}
+.node{
+    height: 50%;
+    width: 25%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+.node h2{
+    height: 100%;
+    width: 100%;
+    color: black;
+    font-weight: 800;
+    background-color: greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    transition: all ease-in-out 0.5s;
+}
+.node img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.node:hover h2{
+    color: white;
+    background-color: transparent;
+}
+.footer{
+    height: 40vh;
+    width: 100%;
+    background:linear-gradient(-170deg,green,greenyellow);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#dots{
+    height: 16.7rem;
+    position: relative;
+    padding-left: 8px;
+}
+#flogo{ 
+    height: 100px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 75px;
+}
+.title1 h3{
+    font-size: 22px;
+    font-weight: 700;
+    color: black;
+    position: relative;
+    line-height: 35px;
+}
+.title2 h3{
+    /* left: 25vw; */
+    font-size: 22px;
+    font-weight: 700;
+    color: black;
+    position: relative;
+    bottom: 20%;
+    line-height: 35px;
+}
+.final h4{
+    position: absolute;
+    width: 23%;
+    /* padding-left: 45vw; */
+    top: 30%;
+    font-weight: 600;
+    /* width: 11%;/ */
+    color: black;
+    font-size: 15px;
+}
