@@ -78,7 +78,7 @@ gsap.to("#colon_2",{
 })
 
 gsap.to(".page5 h1",{
-    y:-66,
+    y:-78,
     scrollTrigger:{
         trigger:".page5 h1",
         scroller:"body",
